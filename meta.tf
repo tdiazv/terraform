@@ -20,14 +20,14 @@ terraform {
     }
   }
 
-  /*backend "remote" {
+  backend "remote" {
     hostname = "app.terraform.io"
     organization = "ProjectTania"
  
     workspaces {
       name = "terraform"
     }
-  }*/
+  }
 }
 
 data "aws_region" "current" {}
