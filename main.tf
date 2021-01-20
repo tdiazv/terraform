@@ -14,8 +14,9 @@ locals {
 # CloudFactory AWS S3 Module
 #---------------------------------------------------
 
-/*module "s3_bucket" {
-  source = "git@gitlab.com:bhp-cloudfactory/aws-components/terraform-aws-s3-bucket.git?ref=v5.0.0"
+module "s3_bucket" {
+  #source = "git@gitlab.com:bhp-cloudfactory/aws-components/terraform-aws-s3-bucket.git?ref=v5.0.0"
+  source = ".//aws-components/terraform-aws-s3-bucket"
 
   bucket_name          = local.bucket_name
   append_random_suffix = local.append_random_suffix
@@ -23,4 +24,4 @@ locals {
   folder_names         = local.folder_names
   custom_tags          = var.custom_tags
   versioning_enabled   = local.versioning_enabled
-}*/
+}
